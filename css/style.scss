@@ -1,0 +1,131 @@
+@import "config";
+@import "colors";
+
+// hero image
+.hero-mobile {
+  width: 100%;
+}
+.hero-desktop {
+  display: none;
+}
+
+// nav style
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+// sidebar style
+.sidebar-toggle {
+  background-color: transparent;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 65%;
+  height: 100%;
+  background-color: $white;
+  padding: 2rem;
+  transform: translateX(100%);
+  transition: all 0.4s linear;
+}
+.show-sidebar {
+  transform: translateX(0);
+}
+.sidebar-links {
+  padding-top: 1rem;
+
+  & > li {
+    font-size: 18px;
+    padding: 0.8rem 0;
+    color: $black;
+
+    a {
+      color: $black;
+    }
+
+    .arrow-down {
+      margin-left: 8px;
+      background-color: transparent;
+    }
+  }
+}
+.nested-links {
+  display: grid;
+  // gap: 1rem;
+  margin-top: 0.8rem;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.4s linear;
+
+
+  li {
+    // padding-top: 0.5rem;
+    padding-left: 1rem;
+  }
+
+  img {
+    margin-right: 0.5rem;
+  }
+}
+.show-features {
+  height: 133px;
+  // height: 150px;
+}
+.show-company {
+  // height: 105px;
+  height: 95px;
+}
+.close-btn {
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  background-color: transparent;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 0.6rem 0;
+  background-color: transparent;
+  font-size: 18px;
+  font-family: 'Epilogue', sans-serif;
+}
+.register-btn {
+  border: 2px solid $black;
+  border-radius: 10px;
+}
+
+.flex {
+  text-align: center;
+  padding: 1rem;
+  h1 {
+    padding: 1rem 0;
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 18px;
+    padding-bottom: 1rem;
+  }
+  .learn-btn {
+    background-color: $black;
+    color: $white;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+  }
+  .clients {
+    img {
+      width: 80px;
+      // margin: 0 0.5rem;
+    }
+  }
+}
+body {
+  margin-bottom: 2rem;
+}
+@import "desktopview";
