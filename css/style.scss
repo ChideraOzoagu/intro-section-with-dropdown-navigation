@@ -1,5 +1,5 @@
-@import "config";
 @import "colors";
+@import "config";
 
 // hero image
 .hero-mobile {
@@ -19,7 +19,9 @@
 // sidebar style
 .sidebar-toggle {
   background-color: transparent;
+  z-index: 100;
 }
+
 .sidebar {
   position: fixed;
   top: 0;
@@ -27,57 +29,74 @@
   width: 65%;
   height: 100%;
   background-color: $white;
-  padding: 2rem;
+  padding: 2rem 1.5rem;
   transform: translateX(100%);
   transition: all 0.4s linear;
 }
 .show-sidebar {
   transform: translateX(0);
+  z-index: 100;
+  opacity: 1;
+}
+.aside-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: var(--transition);
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: -0.5;
+}
+.show-overlay  {
+  opacity: 1;
+  z-index: 1;
 }
 .sidebar-links {
   padding-top: 1rem;
 
   & > li {
     font-size: 18px;
-    padding: 0.8rem 0;
-    color: $black;
+    padding: 0.8rem 0 ;
+    color: $gray;
 
     a {
-      color: $black;
+      color: $gray;
     }
 
     .arrow-down {
       margin-left: 8px;
       background-color: transparent;
+      color: $gray;
     }
   }
 }
 .nested-links {
   display: grid;
-  // gap: 1rem;
-  margin-top: 0.8rem;
+  margin-top: 1rem;
   height: 0;
   overflow: hidden;
   transition: all 0.4s linear;
 
 
   li {
-    // padding-top: 0.5rem;
-    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-left: 1.5rem;
   }
 
   img {
-    margin-right: 0.5rem;
+    margin-right: 0.7rem;
   }
 }
 .show-features {
-  height: 133px;
-  // height: 150px;
+  height: 141px;
+  cursor: pointer;
 }
 .show-company {
-  // height: 105px;
-  height: 95px;
+  height: 103px;
 }
+
 .close-btn {
   position: fixed;
   right: 1rem;
@@ -91,10 +110,11 @@
   margin: 0.6rem 0;
   background-color: transparent;
   font-size: 18px;
+  color: $gray;
   font-family: 'Epilogue', sans-serif;
 }
 .register-btn {
-  border: 2px solid $black;
+  border: 2px solid $gray;
   border-radius: 10px;
 }
 
@@ -108,6 +128,9 @@
   p {
     font-size: 18px;
     padding-bottom: 1rem;
+    line-height: 1.5;
+    word-spacing: 1.5;
+    color: $gray;
   }
   .learn-btn {
     background-color: $black;
@@ -119,13 +142,16 @@
     margin-bottom: 1.5rem;
   }
   .clients {
+    display: flex;
+    align-items: center;
     img {
-      width: 80px;
-      // margin: 0 0.5rem;
+      margin: 0 auto;
     }
   }
 }
 body {
+  // width: 100vw
   margin-bottom: 2rem;
 }
+
 @import "desktopview";
