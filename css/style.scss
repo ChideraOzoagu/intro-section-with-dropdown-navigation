@@ -79,6 +79,9 @@
   overflow: hidden;
   transition: all 0.4s linear;
 
+  .nested-links .arrow-down {
+    transform: rotate(180deg);
+  }
 
   li {
     padding-top: 0.5rem;
@@ -89,14 +92,21 @@
     margin-right: 0.7rem;
   }
 }
+
 .show-features {
   height: 141px;
   cursor: pointer;
 }
 .show-company {
   height: 103px;
+  cursor: pointer;
 }
-
+.show-features .arrow-down {
+  transform: rotate(180deg);
+}
+.show-company .arrow-down {
+  transform: rotate(180deg);
+}
 .close-btn {
   position: fixed;
   right: 1rem;
@@ -150,8 +160,7 @@
   }
 }
 body {
-  // width: 100vw
-  margin-bottom: 2rem;
+  min-height: 100vh;
 }
 
 @import "desktopview";

@@ -1,8 +1,7 @@
-@media screen and (min-width: 968px) {
+@media screen and (min-width: 768px) {
   body {
     min-height: 100vh;
     margin: 0;
-    overflow: hidden;
   }
   .hero-mobile {
     display: none;
@@ -15,8 +14,8 @@
   nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 1.5rem;
+    
 
     .nav-header {
       padding: 0;
@@ -32,11 +31,8 @@
     .nested {
       height: 18px;
       width: 120px;
-      position: relative;
-      display: inline-block;
 
       .features {
-        position: absolute;
         transform: translateX(-50%);
         background-color: white;
         box-shadow: 1px 5px 8px  rgba(0, 0, 0, 0.3);
@@ -44,11 +40,11 @@
         border-radius: 10px;
         width: 160px;
         height: 170px;
-        display: none;
+        opacity: 0;
+        transition: all 1s ease-in-out;
         cursor: pointer;
       }
       .company {
-        position: absolute;
         transform: translateX(10%);
         background-color: white;
         box-shadow: 1px 5px 8px  rgba(0, 0, 0, 0.3);
@@ -56,8 +52,9 @@
         border-radius: 10px;
         width: 150px;
         height: 130px;
+        opacity: 0;
         cursor: pointer;
-        display: none;
+        transition: all 1s ease-in-out;
 
       }
       .features li {
@@ -82,14 +79,22 @@
       transition: all 0.4s linear;
     }
     .nested:hover .features {
-      display: block;
+      opacity: 1;
+      transition: all 0.4s linear;
     }
     .nested:hover .company {
-      display: block;
+      opacity: 1;
+      transition: all 0.4s linear;
+    }
+    .nested:hover .arrow-down {
+      transform: rotate(180deg);
+      transition: 0.4s ease-in-out;
     }
     .sidebar {
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      width: 100%;
       transform: translateX(0);
       height: auto;
       background-color: transparent;
@@ -145,7 +150,13 @@
     .btns {
       display: flex;
       align-items: center;
+      
     }
+  }
+   .features-block {
+    // display: block;
+    // height: 170px;
+    opacity: 1;
   }
   .flex {
     display: grid;

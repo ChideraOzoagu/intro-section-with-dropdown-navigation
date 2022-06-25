@@ -33,7 +33,6 @@ closeBtn.addEventListener("click", function () {
 // nested links
 const nestedLinks = document.querySelector(".nested-links");
 const nested = document.querySelectorAll(".nested");
-const arrowBtn = document.querySelector('.arrow-btn')
 nested.forEach(function (items) {
   items.addEventListener("click", function () {
     const btn = items.lastChild.previousSibling;

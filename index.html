@@ -15,7 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
       rel="stylesheet"
     />
-
+    <script
+    src="https://kit.fontawesome.com/b6f84b6511.js"
+    crossorigin="anonymous"
+  ></script>
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
   </head>
 
@@ -28,16 +31,16 @@
         </button>
       </div>
       <div class="aside-overlay"></div>
-      <aside class="sidebar">
+      <div class="sidebar">
         <button class="close-btn">
           <i class="fa-solid fa-times fa-3x"></i>
         </button>
         <div class="flex-left">
           <ul class="sidebar-links">
             <li class="nested">
-              Features<button class="arrow-down">
-                <i class="fa fa-angle-down"></i>
-              </button>
+              Features
+                <i class="fa fa-angle-down arrow-down"></i>
+              
               <ul class="nested-links features">
                 <li>
                   <img src="./images/icon-todo.svg" alt="todo" />Todo List
@@ -63,9 +66,9 @@
               </ul>
             </li>
             <li class="nested">
-              Company<button class="arrow-down">
-                <i class="fa fa-angle-down"></i>
-              </button>
+              Company
+                <i class="fa fa-angle-down arrow-down"></i>
+             
               <ul class="nested-links company">
                 <li><a href="#">History</a></li>
                 <li><a href="#">Our team</a></li>
@@ -80,7 +83,7 @@
           <button class="btn login-btn">Login</button>
           <button class="btn register-btn">Register</button>
         </div>
-      </aside>
+      </div>
     </nav>
     <section>
       <div class="flex">
@@ -110,15 +113,12 @@
         </div>
       </div>
     </section>
-    <!-- <div class="attribution">
+    <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Chidera Ozoagu</a>.
-  </div> -->
+  </div>
 
-    <script
-      src="https://kit.fontawesome.com/b6f84b6511.js"
-      crossorigin="anonymous"
-    ></script>
+   
     <script src="./app.js"></script>
   </body>
 </html>
