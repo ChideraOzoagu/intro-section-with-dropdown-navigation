@@ -161,15 +161,14 @@
     opacity: 1;
   }
   .flex {
-    display: grid;
-    place-items: center;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
     text-align: left;
     padding: 2rem 5rem ;
 
     .content {
-      grid-area: 1/1/span 1/ span 1;
       h1 {
         font-size: 4.5rem;
         max-width: 30rem;
@@ -177,7 +176,7 @@
       }
 
       p {
-          max-width: 30rem;
+          max-width: 40rem;
           padding-bottom: 2rem;
       }
     }
@@ -190,17 +189,5 @@
   }
   .clients {
       padding-top: 2rem;
-  }
-
-  .feature-hover {
-    display: block;
-    width: 160px;
-      height: 140px;
-      // background-color: white;
-      background-color: black;
-      padding: 1rem;
-      border-radius: 10px;
-      transform: translateX(-50%);
-      cursor: pointer;
   }
 }
