@@ -16,9 +16,9 @@
       rel="stylesheet"
     />
     <script
-    src="https://kit.fontawesome.com/b6f84b6511.js"
-    crossorigin="anonymous"
-  ></script>
+      src="https://kit.fontawesome.com/b6f84b6511.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
   </head>
 
@@ -40,41 +40,41 @@
             <ul class="sidebar-links">
               <li class="nested">
                 Features
-                  <i class="fa fa-angle-down arrow-down"></i>
-      
-                <ul class="nested-links features">
-                  <li>
+                <i class="fa fa-angle-down arrow-down"></i>
+                <!-- fix -->
+                <div class="nested-links features">
+                  <a>
                     <img src="./images/icon-todo.svg" alt="todo" />Todo List
-                  </li>
-                  <li>
+                  </a>
+                  <a>
                     <img
                       src="./images/icon-calendar.svg"
                       alt="calendar"
                     />Calendar
-                  </li>
-                  <li>
+                  </a>
+                  <a>
                     <img
                       src="./images/icon-reminders.svg"
                       alt="reminders"
                     />Reminders
-                  </li>
-                  <li>
+                  </a>
+                  <a>
                     <img
                       src="./images/icon-planning.svg"
                       alt="planning"
                     />Planning
-                  </li>
-                </ul>
+                  </a>
+                </div>
               </li>
               <li class="nested">
                 Company
-                  <i class="fa fa-angle-down arrow-down"></i>
-      
-                <ul class="nested-links company">
-                  <li><a href="#">History</a></li>
-                  <li><a href="#">Our team</a></li>
-                  <li><a href="#">Blog</a></li>
-                </ul>
+                <i class="fa fa-angle-down arrow-down"></i>
+
+                <div class="nested-links company">
+                  <a href="#">History</a>
+                  <a href="#">Our team</a>
+                  <a href="#">Blog</a>
+                </div>
               </li>
               <li><a href="#">Careers</a></li>
               <li><a href="#">About</a></li>
@@ -116,11 +116,12 @@
       </section>
     </main>
     <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Chidera Ozoagu</a>.
-  </div>
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Chidera Ozoagu</a>.
+    </div>
 
-   
     <script src="./app.js"></script>
   </body>
 </html>

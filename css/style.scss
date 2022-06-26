@@ -79,11 +79,10 @@
   overflow: hidden;
   transition: all 0.4s linear;
 
-  .nested-links .arrow-down {
-    transform: rotate(180deg);
-  }
 
-  li {
+  a {
+    display: flex;
+    align-items: center;
     padding-top: 0.5rem;
     padding-left: 1.5rem;
   }
@@ -101,7 +100,7 @@
   height: 103px;
   cursor: pointer;
 }
-.show-features .arrow-down {
+ .show-features .arrow-down {
   transform: rotate(180deg);
 }
 .show-company .arrow-down {
