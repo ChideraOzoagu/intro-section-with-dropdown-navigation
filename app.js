@@ -31,18 +31,16 @@ closeBtn.addEventListener("click", function () {
 });
 
 // nested links
-const nestedLinks = document.querySelector(".nested-links");
 const nested = document.querySelectorAll(".nested");
 nested.forEach(function (items) {
-  items.addEventListener("click", function () {
-    const btn = items.lastChild.previousSibling;
+  items.addEventListener("click", function (e) {
+    const btn = e.target.lastChild.previousSibling;
     if (btn.classList.contains("features")) {
       btn.classList.toggle("show-features");
-    } else {
-      btn.classList.toggle("show-company");
+    } 
+    else if (btn.classList.contains('company')){
+      btn.classList.toggle('show-company')
     }
-   
   });
-  
 });
 
