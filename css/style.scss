@@ -31,7 +31,7 @@
   background-color: $white;
   padding: 2rem 1.5rem;
   transform: translateX(100%);
-  transition: all 0.4s linear;
+  transition: all 0.3s linear;
 }
 .show-sidebar {
   transform: translateX(0);
@@ -72,6 +72,7 @@
     }
   }
 }
+
 .nested-links {
   display: grid;
   margin-top: 1rem;
@@ -80,7 +81,7 @@
   transition: all 0.4s linear;
 
 
-  a {
+  li {
     display: flex;
     align-items: center;
     padding-top: 0.5rem;
